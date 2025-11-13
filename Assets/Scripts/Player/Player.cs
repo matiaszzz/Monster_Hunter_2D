@@ -17,9 +17,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         move = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
+        transform.Translate(move*speed * Time.deltaTime, 0, 0);
 
-        if(move != 0)
+        if (move != 0)
             transform.localScale = new Vector3(Mathf.Sign(move), 1, 1);
         
     }
