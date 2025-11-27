@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
 
     private Animator animator;
+
+    private int gemas;
+    public TMP_Text textGema;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,6 +48,16 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Gema"))
+        {
+            Destroy(collision.gameObject);
+            gemas++;
+            textGema.text = gemas.ToString();
+        }
     }
 
 }
