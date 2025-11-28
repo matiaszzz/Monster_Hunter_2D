@@ -490,6 +490,8 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420034}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -584,7 +586,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 2.4734852
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -609,12 +611,59 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.59, y: -0.08, z: -10}
+  m_LocalPosition: {x: 0.65, y: 0.38, z: -4.909793}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe3a82f42f587a4584d012df2352601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  player: {fileID: 1152452593}
+  offset: {x: 0, y: 0.02, z: 0}
+  velocidadCamera: 10
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!4 &520321654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5551611209337183200, guid: b80ced62cbb361445adefc3afa73de5e, type: 3}
@@ -850,8 +899,8 @@ Transform:
   m_GameObject: {fileID: 779610799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.17, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.42, z: 1}
+  m_LocalPosition: {x: 1.72, y: 0.47, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.486486, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1014028864}
@@ -1215,7 +1264,7 @@ Transform:
   m_GameObject: {fileID: 1152452590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.92, y: -0.18, z: 0}
+  m_LocalPosition: {x: -3.24, y: -0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26321,7 +26370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4295129089664302605, guid: d8c8fef0b0e84d24cb8fcfefa0b2253d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.73
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 4295129089664302605, guid: d8c8fef0b0e84d24cb8fcfefa0b2253d, type: 3}
       propertyPath: m_LocalPosition.z
