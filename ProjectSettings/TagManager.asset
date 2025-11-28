@@ -8,6 +8,7 @@ TagManager:
   - Gema
   - Enemigo
   - Enemigo2
+  - Spikes
   layers:
   - Default
   - TransparentFX

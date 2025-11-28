@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -57,6 +58,10 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             gemas++;
             textGemas.text = gemas.ToString();
+        }
+        if (collision.transform.CompareTag("Spikes"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
