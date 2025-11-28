@@ -8,7 +8,7 @@ public class Jefe : MonoBehaviour
 
     public Rigidbody2D rb2D;
 
-    public Transform player;
+    public Transform jugador;
 
     private bool mirandoDerecha = true;
 
@@ -31,13 +31,13 @@ public class Jefe : MonoBehaviour
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
         //barraDeVida.InicializarBarraDeVida(vida);
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         
     }
 
     private void Update()
     {
-        float distanciaJugador = Vector2.Distance(transform.position, player.position);
+        float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
         animator.SetFloat("distanciaJugador", distanciaJugador);
     }
 
@@ -60,8 +60,8 @@ public class Jefe : MonoBehaviour
 
     public void MirarJugador()
     {
-        if ((player.position.x > transform.position.x && !mirandoDerecha) || (player.position.x < transform.position.x && mirandoDerecha))
-        {
+        if ((jugador.position.x > transform.position.x && !mirandoDerecha) || (jugador.position.x < transform.position.x && mirandoDerecha))
+        { 
             mirandoDerecha = !mirandoDerecha;
             transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         }

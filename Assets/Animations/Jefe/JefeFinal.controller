@@ -81,7 +81,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: distanciaJugador
-    m_EventTreshold: 0.5
+    m_EventTreshold: 0.6
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2274999916222247318}
   m_Solo: 0
@@ -90,7 +90,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.7083334
+  m_ExitTime: 0.6875
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcb39f13a7b3eb44adf9b1e1b6a731c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  velocidadMovimiento: 1
+  velocidadMovimiento: 4
 --- !u!1107 &5297670981548663581
 AnimatorStateMachine:
   serializedVersion: 6
@@ -208,25 +208,25 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7256326800498277734}
-    m_Position: {x: 280, y: 120, z: 0}
+    m_Position: {x: -790, y: 890, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2274999916222247318}
-    m_Position: {x: 180, y: 270, z: 0}
+    m_Position: {x: -880, y: 1040, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1051086715841371935}
-    m_Position: {x: 270, y: 10, z: 0}
+    m_Position: {x: -770, y: 710, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -982885372411374899}
-    m_Position: {x: 460, y: 250, z: 0}
+    m_Position: {x: -540, y: 1040, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 6538434935903330824}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_AnyStatePosition: {x: -960, y: 710, z: 0}
+  m_EntryPosition: {x: -1020, y: 890, z: 0}
+  m_ExitPosition: {x: -440, y: 830, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 7256326800498277734}
 --- !u!1101 &6538434935903330824
