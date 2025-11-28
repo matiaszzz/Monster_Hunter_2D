@@ -150,5 +150,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e0a00697f61984986dfdd7911502e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BalaEnemigo
-  velocidad: 5
-  "da\xF1o": 1
+  velocidad: 3
+  danioBala: 1

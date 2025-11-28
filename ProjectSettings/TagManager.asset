@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floor
   - Gema
+  - Enemigo
+  - Enemigo2
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Enemigo
   - 
   - 
   - 

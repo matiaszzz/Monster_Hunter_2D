@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class VidaPlayer : MonoBehaviour
 {
-    public int cantidadVida;
+    [SerializeField] private float cantidadVida;
 
-    public void TomarDaño(int daño)
+    public void TomarDanio(int danio)
     {
-        cantidadVida -= daño;
+        cantidadVida -= danio;
         if (cantidadVida <= 0)
         {
             Destroy(gameObject);
