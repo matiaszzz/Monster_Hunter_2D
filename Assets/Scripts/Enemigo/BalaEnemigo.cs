@@ -3,7 +3,7 @@ using UnityEngine;
 public class BalaEnemigo : MonoBehaviour
 {
     public float velocidad;
-    public int daño;
+    public int danioBala;
 
     private void Update()
     {
@@ -14,7 +14,7 @@ public class BalaEnemigo : MonoBehaviour
     {
         if (other.TryGetComponent(out VidaPlayer vidaJugador))
         {
-            vidaJugador.TomarDaño(daño);
+            vidaJugador.TomarDanio(danioBala);
             Destroy(gameObject);
         }
     }
