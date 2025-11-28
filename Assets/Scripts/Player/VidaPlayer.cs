@@ -4,7 +4,7 @@ public class VidaPlayer : MonoBehaviour
 {
     [SerializeField] private float cantidadVida;
 
-    public void TomarDanio(int danio)
+    public void TomarDanio(float danio)
     {
         cantidadVida -= danio;
         if (cantidadVida <= 0)

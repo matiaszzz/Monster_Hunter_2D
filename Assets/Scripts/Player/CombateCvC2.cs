@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombateCvC : MonoBehaviour
+public class CombateCvC2 : MonoBehaviour
 {
+
     [SerializeField] private Transform controladorGolpe;
     [SerializeField] private float radioGolpe;
     [SerializeField] private float danioGolpe;
@@ -24,7 +25,7 @@ public class CombateCvC : MonoBehaviour
             tiempoSiguienteAtaque -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <=0)
+        if (Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
         {
             Golpear();
             tiempoSiguienteAtaque = tiempoEntreAtaque;
@@ -39,9 +40,9 @@ public class CombateCvC : MonoBehaviour
 
         foreach (Collider2D colisionador in objetos)
         {
-            if(colisionador.CompareTag("Jefe"))
+            if (colisionador.CompareTag("Enemigo"))
             {
-                colisionador.transform.GetComponent<Jefe>().TomarDanio(danioGolpe);
+                colisionador.transform.GetComponent<Enemigos>().TomarDanio(danioGolpe);
             }
         }
     }
