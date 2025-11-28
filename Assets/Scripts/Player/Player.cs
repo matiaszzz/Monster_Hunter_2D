@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     private int gemas;
-    public TMP_Text textGema;
+    public TMP_Text textGemas;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         {
             Destroy(collision.gameObject);
             gemas++;
-            textGema.text = gemas.ToString();
+            textGemas.text = gemas.ToString();
         }
     }
 
